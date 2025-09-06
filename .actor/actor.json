@@ -5,5 +5,41 @@
   "description": "Scrape data from Apify Shopify page.",
   "version": "0.0",
   "input": "./input_schema.json",
-  "dockerfile": "../Dockerfile"
+  "dockerfile": "../Dockerfile",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Output",
+      "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "description": "Selected fields from the dataset",
+          "transformation": {
+            "fields": ["name", "price", "currency"]
+          },
+          "display": {
+            "component": "table",
+            "columns": [
+              {
+                "label": "Name",
+                "format": "text",
+                "field": "name"
+              },
+              {
+                "label": "Price",
+                "format": "text",
+                "field": "price"
+              },
+              {
+                "label": "Currency",
+                "format": "text",
+                "field": "currency"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
 }
