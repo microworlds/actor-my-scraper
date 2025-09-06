@@ -1,14 +1,20 @@
 // For more information, see https://crawlee.dev/
 import { PlaywrightCrawler } from "crawlee";
 import { router } from "./routes.js";
+import { Actor } from "apify";
 
-const startUrls = ["https://apifytech.myshopify.com/"];
+// Init the actor
+await Actor.init();
+
+const { url } = await Actor.getInput();
+
+const startUrls = [url];
 
 const crawler = new PlaywrightCrawler({
   // proxyConfiguration: new ProxyConfiguration({ proxyUrls: ['...'] }),
   requestHandler: router,
   // Comment this option to scrape the full website.
-  maxRequestsPerCrawl: 20,
+  maxRequestsPerCrawl: 5,
   launchContext: {
     launchOptions: {
       headless: false,

@@ -1,0 +1,10 @@
+{
+    "actorSpecification": 1,
+    "name": "my-actor",
+    "title": "Scrape single page in JavaScript",
+    "description": "Scrape data from single page with provided URL.",
+    "version": "0.0",
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile"
+}
+

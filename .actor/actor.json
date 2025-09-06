@@ -1,0 +1,9 @@
+{
+  "actorSpecification": 1,
+  "name": "my-scraper",
+  "title": "Scrape Apify Shopify page",
+  "description": "Scrape data from Apify Shopify page.",
+  "version": "0.0",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile"
+}
