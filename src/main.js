@@ -12,8 +12,8 @@ const crawler = new PlaywrightCrawler({
   launchContext: {
     launchOptions: {
       headless: false,
-      executablePath:
-        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      //   executablePath:
+      //     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     },
   },
 });
